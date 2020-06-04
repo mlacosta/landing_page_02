@@ -99,11 +99,20 @@ section{
 .title-box{
     margin-left: 5rem;
 }
+
+.inner{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 100px;
+    max-width: 1200px;
+}
+
 /*nav var*/
 nav{
     display: inline-flex;
     width: 100%;
-    background-color: blueviolet;
+    background: linear-gradient(#8a2be2,#000000);
     position: fixed;
     z-index: 10;
     justify-content: space-between;
@@ -119,7 +128,7 @@ nav{
 }
 .menu a{
     text-decoration: none;
-    color: black;
+    color: gray;
     font-size: 1.1rem;
 }
 
@@ -154,12 +163,6 @@ nav{
     top:80px;
 }
 
-.landing .inner{
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 100px;
-}
 
 /*features*/
 
@@ -168,6 +171,42 @@ nav{
     top: 80px;
 
 }
+/*showcase*/
+.features{
+
+    display: flex;
+    justify-content: center;
+}
+
+.features .inner{
+    display: block;
+
+}
+
+.features .description{
+    display: flex;
+}
+
+
+.showcase{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+}
+.showcase .container{
+    height: 250px;
+    width: 250px;
+    background-color: indigo;
+    border: 2px solid lightcoral;
+}
+
+.showcase .container:hover{
+    height: 350px;
+    transition: .5s;
+}
+
 
 /*footer*/
 footer{
@@ -175,12 +214,16 @@ footer{
     background-color:slategray;
     text-align: center;
     position: relative;
-    top: 110px;
+    bottom: 0;
+    top:10px;
+    width: 100%;
     width: 100%;
 }
 
 footer p{
-    padding: 1.5rem 0;
+    padding: 1.6rem 0;
     color: black;
-    font-weight: 700;
+    font-weight: 400;
+    font-size: .8rem;
 }
+
