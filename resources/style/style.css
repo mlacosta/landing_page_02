@@ -8,15 +8,41 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
   /* latin */
-  @font-face {
+@font-face {
     font-family: 'Orbitron';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/orbitron/v15/yMJRMIlzdpvBhQQL_Qq7dy0.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Barlow Semi Condensed Regular'), local('BarlowSemiCondensed-Regular'), url(https://fonts.gstatic.com/s/barlowsemicondensed/v5/wlpvgxjLBV1hqnzfr-F8sEYMB0Yybp0mudRXeIqq.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+/* latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
+ /* latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwJYtWqZPAA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} 
+
+/*global style*/
 *{
     margin: 0;
     padding: 0;
@@ -24,26 +50,137 @@
 }
 
 html{
-    font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+    
     font-size: 16px;
     background-color:rgb(224, 213, 213);
+    color: cornsilk;
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    
 }
 
 h1,h3{
     font-weight: 700;
+    font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+
 }
 
+h3{
+    font-size: .8rem;
+}
+
+h1{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+p,nav{
+    font-family:'Raleway', Arial;
+}
+
+section{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 4rem 0;
+    min-height: 700px;
+}
+
+.p-box{
+    max-width: 400px;
+    padding: 0 2rem;
+    margin-top: 3rem;
+    line-height: 1.4rem;
+}
+
+.title-box{
+    margin-left: 5rem;
+}
+/*nav var*/
 nav{
-    display: inline-block;
+    display: inline-flex;
     width: 100%;
     background-color: blueviolet;
+    position: fixed;
+    z-index: 10;
+    justify-content: space-between;
+    
+   /* justify-content: space-around;*/
 }
 
 .menu{
-    position: absolute;
-    right: 0;
+   /* position: absolute;
+    right: 0;*/
+    margin: auto 0;
+    
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.menu a:hover{
+    color: cornsilk;
+    transition: .5s;
 }
 .menu li{
     display: inline-block;
     padding: 0 1rem;
+}
+
+.logo{
+    height: 80px;
+}
+
+.search-bar{
+    margin: auto 0;
+    margin-left: 10%;
+}
+.language{
+    margin: auto 0;
+    margin-left: 10px;
+}
+
+/*landing*/
+.landing{
+    position: relative;
+    height: 100vh;
+    background-image: url('../img/milky-way.jpg');
+    background-size: cover;
+    top:80px;
+}
+
+.landing .inner{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+/*features*/
+
+.features{
+    position: relative;
+    top: 80px;
+
+}
+
+/*footer*/
+footer{
+    height: 70px;
+    background-color:slategray;
+    text-align: center;
+    position: relative;
+    top: 110px;
+    width: 100%;
+}
+
+footer p{
+    padding: 1.5rem 0;
+    color: black;
+    font-weight: 700;
 }
