@@ -176,6 +176,7 @@ nav{
 
     display: flex;
     justify-content: center;
+    min-height: 1000px;
 }
 
 .features .inner{
@@ -187,26 +188,57 @@ nav{
     display: flex;
 }
 
+.arrow{
+    height: 20px;
+    cursor: pointer;
+}
+
+.clickable{
+    position: absolute;
+    right: 100px;
+}
+
+.arrow:hover{
+    transition: .5s;
+    opacity: .5;
+}
 
 .showcase{
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    margin: 4rem 0;
+   /* margin: 0 auto;*/
+    
+    margin: 5rem 0;
 }
 .showcase .container{
+    position: relative;
     height: 250px;
     width: 250px;
-    background-color: indigo;
-    border: 2px solid lightcoral;
+    flex-shrink: .8;   
+    background-color: rgb(22, 1, 37);
 }
 
 .showcase .container:hover{
-    height: 350px;
+    height: 300px;
+    top: -50px;
+    background-color: rgb(255, 217, 222);
     transition: .5s;
 }
 
+.showcase .icon{
+    position: absolute;
+    right: 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 0 0 0 120%;
+}
+
+.showcase .number{
+    position: absolute;
+    left: 10px;
+    color: lightslategray;
+    font-size: 2rem;
+}   
 
 /*footer*/
 footer{
